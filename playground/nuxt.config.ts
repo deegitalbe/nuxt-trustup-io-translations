@@ -2,8 +2,13 @@ import * as dotenv from "dotenv";
 dotenv.config();
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      appName: "",
+    },
+  },
   modules: ["../src/module"],
-  {MODULE_CONFIG_KEY}: {},
+  trustupIoTranslations: {},
   postcss: {
     plugins: {
       tailwindcss: {},

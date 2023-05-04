@@ -18,6 +18,8 @@
             <div class="text-[300px]">🎉</div>
             <div class="text-2xl text-gray-600 font-thin">
               Let's build something amazing !
+              {{ $t("apps.worksite") }} {{ $translator.t("apps.worksite") }}
+              {{ translation.loader.isLoading }}
             </div>
           </div>
         </div>
@@ -27,9 +29,11 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "#imports";
+import { onMounted, ref, useTranslation } from "#imports";
 
 const isReady = ref<boolean>(false);
 
-onMounted(() => isReady.value = true);
+const translation = useTranslation();
+
+onMounted(() => (isReady.value = true));
 </script>

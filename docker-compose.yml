@@ -1,8 +1,8 @@
 version: '3.4'
-name: {MODULE_NAME}
+name: nuxt-trustup-io-translations
 services:
   app:
-    container_name: {MODULE_NAME}-app
+    container_name: nuxt-trustup-io-translations-app
     build:
       context: .
       dockerfile: Dockerfile

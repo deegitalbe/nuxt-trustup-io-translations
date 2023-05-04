@@ -1,4 +1,7 @@
 import {
+  addImports,
+  addPlugin,
+  createResolver,
   defineNuxtModule,
   // createResolver,
   // addComponent,
@@ -10,22 +13,18 @@ export interface ModuleOptions {}
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: "{ORGANIZATION_NAME}/{MODULE_NAME}",
-    configKey: "{MODULE_CONFIG_KEY}",
+    name: "@deegital/nuxt-trustup-io-translations",
+    configKey: "trustupIoTranslations",
   },
   defaults: {},
   setup(_options, _nuxt) {
-    // const resolver = createResolver(import.meta.url);
+    const { resolve } = createResolver(import.meta.url);
 
-    // addComponent({
-    //   name: "TrustupIoToasteo",
-    //   export: "NotificationContainer",
-    //   filePath: "@deegital/vue-trustup-io-toasteo",
-    // });
+    addPlugin(resolve("./runtime/plugins/translationsPlugin"));
 
-    // addImports({
-    //   name: "useToasteo",
-    //   from: "@deegital/vue-trustup-io-toasteo",
-    // });
+    addImports({
+      name: "useTranslation",
+      from: "@deegital/vue-3-trustup-io-i18n",
+    });
   },
 });

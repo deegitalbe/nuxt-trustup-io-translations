@@ -1,8 +1,8 @@
 {
-  "name": "{ORGANIZATION_NAME}/{MODULE_NAME}",
+  "name": "@deegital/nuxt-trustup-io-translations",
   "version": "0.0.1",
-  "description": "{MODULE_DESCRIPTION}",
-  "repository": "{REPOSITORY_URL}",
+  "description": "Nuxt module to translate on our nuxt apps",
+  "repository": "git@github.com:deegitalbe/nuxt-trustup-io-translations.git",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -37,6 +37,7 @@
     "postinstall": "yarn generate"
   },
   "dependencies": {
+    "@deegital/vue-3-trustup-io-i18n": "^0.0.6",
     "@nuxt/kit": "^3.4.2"
   },
   "devDependencies": {
