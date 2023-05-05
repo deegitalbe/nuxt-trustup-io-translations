@@ -20,17 +20,11 @@
               Let's build something amazing !
               {{ $t("apps.worksite") }} {{ $translator.t("apps.worksite") }}
               {{ translation.loader.isLoading }}
-              <!-- 
               <div v-if="!translation.loader.isLoading">
                 <div>
-                  {{
-                    translation.i18n.global.setLocaleMessage("fr", {
-                      accoutant: "{msg} comptable",
-                    })
-                  }}
                   {{ translation.t("accoutant", { msg: "George" }) }}
                 </div>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
@@ -43,8 +37,15 @@
 import { onMounted, ref, useTranslation } from "#imports";
 
 const isReady = ref<boolean>(false);
-
 const translation = useTranslation();
+
+setTimeout(
+  () =>
+    translation.i18n.global.setLocaleMessage("fr", {
+      accoutant: "{msg} comptable",
+    }),
+  4000
+);
 
 onMounted(() => (isReady.value = true));
 </script>
