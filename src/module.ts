@@ -26,5 +26,10 @@ export default defineNuxtModule<ModuleOptions>({
       name: "useTranslation",
       from: "@deegital/vue-3-trustup-io-i18n",
     });
+
+    addImports({
+      name: "useTranslate",
+      from: "@deegital/vue-3-trustup-io-i18n",
+    });
   },
 });

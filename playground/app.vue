@@ -16,6 +16,7 @@
         >
           <div>
             <div class="text-[300px]">🎉</div>
+            <div>{{ useTranslate("accoutant") }}</div>
             <div class="text-2xl text-gray-600 font-thin">
               Let's build something amazing !
               {{ $t("apps.worksite") }} {{ $translator.t("apps.worksite") }}
@@ -34,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, useTranslation } from "#imports";
+import { onMounted, ref, useTranslate, useTranslation } from "#imports";
 
 const isReady = ref<boolean>(false);
 const translation = useTranslation();

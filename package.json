@@ -34,7 +34,7 @@
     "postpublish": "git push && git push --tags"
   },
   "dependencies": {
-    "@deegital/vue-3-trustup-io-i18n": "^0.0.8",
+    "@deegital/vue-3-trustup-io-i18n": "^0.0.10",
     "@nuxt/kit": "^3.4.2"
   },
   "devDependencies": {
