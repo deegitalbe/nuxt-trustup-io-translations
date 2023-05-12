@@ -16,6 +16,8 @@
         >
           <div>
             <div class="text-[300px]">🎉</div>
+            <div>{{ translation.getAvailableLocales() }}</div>
+            <div>{{ translation.getCurrentLocale() }}</div>
             <div>{{ useTranslate("accoutant") }}</div>
             <div class="text-2xl text-gray-600 font-thin">
               Let's build something amazing !
