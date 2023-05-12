@@ -44,6 +44,51 @@ export default defineNuxtConfig({
 })
 ```
 
+3. Add runtimeconfig
+
+```javascript
+runtimeConfig: {
+    public: {
+      appName: "",
+    },
+  },
+```
+
+4. Add environment variable related to your app
+
+```bash
+NUXT_PUBLIC_APP_NAME=trustup-pro
+```
+
+5. How to use it ?
+
+```html
+<div>{{ $t("apps.worksite") }}</div>
+```
+OR
+
+```html
+<div>{{ $translator.t("apps.worksite") }}</div>
+```
+OR
+
+```javascript
+
+
+  const translation = useTranslation();
+
+  translation.getAvailableLocales();
+  translation.getCurrentLocale();
+  translation.i18n;
+  translation.setCurrentLocale("fr");
+  translation.loader;
+  translation.t("key")
+
+  useTranslate("key"); // work like $t
+
+
+```
+
 That's it! You can now use nuxt-trustup-io-translations in your Nuxt app ✨
 
 ## Development
