@@ -1,8 +1,8 @@
-version: '3.4'
-name: nuxt-trustup-io-translations
+version: "3.4"
+name: "nuxt-trustup-io-translations"
 services:
   app:
-    container_name: nuxt-trustup-io-translations-app
+    container_name: "nuxt-trustup-io-translations-app"
     build:
       context: .
       dockerfile: Dockerfile

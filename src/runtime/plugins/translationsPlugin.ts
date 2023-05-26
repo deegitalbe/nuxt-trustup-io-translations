@@ -1,4 +1,4 @@
-import { translationPlugin } from "@deegital/vue-3-trustup-io-i18n";
+import { translationPlugin } from "@deegital/vue-3-trustup-io-translations";
 import { defineNuxtPlugin, useRuntimeConfig } from "#imports";
 
 export default defineNuxtPlugin((nuxtApp) => {

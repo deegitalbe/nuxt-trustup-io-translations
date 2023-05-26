@@ -2,9 +2,11 @@
   "name": "@deegital/nuxt-trustup-io-translations",
   "version": "0.0.7",
   "description": "Nuxt module to translate on our nuxt apps",
-  "repository": "git@github.com:deegitalbe/nuxt-trustup-io-translations.git",
-  "license": "MIT",
-  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.js",
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -12,32 +14,35 @@
       "require": "./dist/module.cjs"
     }
   },
-  "main": "./dist/module.cjs",
   "types": "./dist/types.d.ts",
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "dev:prepare": "nuxt-module-build --stub && yarn generate",
     "generate": "nuxi prepare playground",
     "dev": "yarn generate && nuxi dev playground",
     "dev:build": "nuxi build playground",
-    "build": "yarn validate && nuxt-module-build",
-    "lint": "eslint . --fix",
-    "ts": "vue-tsc --noEmit",
-    "validate": "yarn ts && yarn lint && yarn test",
+    "lint": "vue-tsc --noEmit && eslint . --fix",
     "format": "prettier --write \"src/**/*\"",
     "test": "vitest run",
     "test:watch": "vitest watch",
-    "dev:prepare": "nuxt-module-build --stub && yarn generate",
-    "version": "yarn format && git add -A src",
-    "postversion": "npm publish",
-    "postpublish": "git push && git push --tags"
+    "validate": "yarn lint && yarn test && yarn format",
+    "build": "nuxt-module-build",
+    "release": "yarn build && changeset publish"
   },
-  "dependencies": {
-    "@deegital/vue-3-trustup-io-i18n": "^0.0.11",
-    "@nuxt/kit": "^3.4.2"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deegital/nuxt-trustup-io-translations.git"
   },
+  "author": "Axel Marquet <axel.marquet@trustup.be>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deegital/nuxt-trustup-io-translations/issues"
+  },
+  "homepage": "https://github.com/deegital/nuxt-trustup-io-translations#readme",
   "devDependencies": {
+    "@changesets/cli": "^2.26.1",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "^0.3.0",
     "@nuxt/schema": "^3.4.2",
@@ -56,5 +61,9 @@
     "vite-plugin-eslint": "^1.8.1",
     "vitest": "^0.30.1",
     "vue-tsc": "^1.4.4"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.4.2",
+    "@deegital/vue-3-trustup-io-translations": "0.0.12"
   }
 }

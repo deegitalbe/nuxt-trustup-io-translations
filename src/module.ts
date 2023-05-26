@@ -24,12 +24,12 @@ export default defineNuxtModule<ModuleOptions>({
 
     addImports({
       name: "useTranslation",
-      from: "@deegital/vue-3-trustup-io-i18n",
+      from: "@deegital/vue-3-trustup-io-translations",
     });
 
     addImports({
       name: "useTranslate",
-      from: "@deegital/vue-3-trustup-io-i18n",
+      from: "@deegital/vue-3-trustup-io-translations",
     });
   },
 });
