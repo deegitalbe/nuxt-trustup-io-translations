@@ -1,5 +1,11 @@
 # @deegital/nuxt-trustup-io-translations
 
+## 0.0.10
+
+### Patch Changes
+
+- face3a6: Using global instance.
+
 ## 0.0.9
 
 ### Patch Changes
