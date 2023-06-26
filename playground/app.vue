@@ -16,16 +16,17 @@
         >
           <div>
             <div class="text-[300px]">🎉</div>
-            <div>{{ translation.getAvailableLocales() }}</div>
-            <div>{{ translation.getCurrentLocale() }}</div>
+            <div>{{ availableLocales }}</div>
+            <div>{{ currentLocale }}</div>
             <div>{{ useTranslate("accoutant") }}</div>
+            <div>{{ t("worksite-admin.app.actions.create") }}</div>
             <div class="text-2xl text-gray-600 font-thin">
               Let's build something amazing !
-              {{ $t("apps.worksite") }} {{ $translator.t("apps.worksite") }}
-              {{ translation.loader.isLoading }}
-              <div v-if="!translation.loader.isLoading">
+              {{ $t("apps.worksite") }} {{ t("apps.worksite") }}
+              {{ isLoading }}
+              <div v-if="!isLoading">
                 <div>
-                  {{ translation.t("accoutant", { msg: "George" }) }}
+                  {{ t("accoutant", { msg: "George" }) }}
                 </div>
               </div>
             </div>
@@ -40,15 +41,10 @@
 import { onMounted, ref, useTranslate, useTranslation } from "#imports";
 
 const isReady = ref<boolean>(false);
-const translation = useTranslation();
+const { availableLocales, currentLocale, isLoading, t, addTranslationsByKey } =
+  useTranslation();
 
-setTimeout(
-  () =>
-    translation.i18n.global.setLocaleMessage("fr", {
-      accoutant: "{msg} comptable",
-    }),
-  4000
-);
+setTimeout(() => addTranslationsByKey("worksite-admin"), 4000);
 
 onMounted(() => (isReady.value = true));
 </script>

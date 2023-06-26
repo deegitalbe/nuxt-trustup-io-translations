@@ -7,6 +7,7 @@ export default defineNuxtConfig({
       appName: "",
     },
   },
+  ssr: false,
   modules: ["../src/module"],
   trustupIoTranslations: {},
   postcss: {
