@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div
     class="h-screen w-screen flex items-center justify-center bg-gradient-to-br to-cyan-600 from-blue-500"
   >
@@ -47,4 +47,4 @@ const { availableLocales, currentLocale, isLoading, t, addTranslationsByKey } =
 setTimeout(() => addTranslationsByKey("worksite-admin"), 4000);
 
 onMounted(() => (isReady.value = true));
-</script>
+</script> -->
