@@ -1,5 +1,11 @@
 # @deegital/nuxt-trustup-io-translations
 
+## 0.0.12
+
+### Patch Changes
+
+- ffe8080: Upgrade vue package version
+
 ## 0.0.11
 
 ### Patch Changes
