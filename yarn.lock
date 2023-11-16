@@ -493,10 +493,10 @@
   dependencies:
     mime "^3.0.0"
 
-"@deegital/vue-3-trustup-io-translations@^0.0.16":
-  version "0.0.16"
-  resolved "https://registry.yarnpkg.com/@deegital/vue-3-trustup-io-translations/-/vue-3-trustup-io-translations-0.0.16.tgz#adea451f750192d6f8f4468c1eb34a4385830ab7"
-  integrity sha512-qlHrbok+fSHr5/tVOBXgmzUqx/rbehG97pI3s+vQVyzbUOAa3u5XUtGWrbOICnR/V1fZ7kYUs9Mxf1IRv5TM3w==
+"@deegital/vue-3-trustup-io-translations@^0.0.17":
+  version "0.0.17"
+  resolved "https://registry.yarnpkg.com/@deegital/vue-3-trustup-io-translations/-/vue-3-trustup-io-translations-0.0.17.tgz#6a86727952173bf5dae66cdb995b9fb11efcf5ee"
+  integrity sha512-lm7yn+F1MfZ0QSIxU+B6vGfHkHzkpC8qvuqXeZZn1HRk6Gp4R0cLq5XtMnsL/m3lThSwLPh1QqmhV+iCJaaVbQ==
   dependencies:
     "@henrotaym/api-client" "^1.3.3"
     "@henrotaym/helpers" "^1.2.0"
