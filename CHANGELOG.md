@@ -1,5 +1,11 @@
 # @deegital/nuxt-trustup-io-translations
 
+## 0.0.14
+
+### Patch Changes
+
+- fd843de: Add components locale menu
+
 ## 0.0.13
 
 ### Patch Changes
