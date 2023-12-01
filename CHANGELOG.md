@@ -1,5 +1,11 @@
 # @deegital/nuxt-trustup-io-translations
 
+## 0.0.15
+
+### Patch Changes
+
+- ddda81c: Fix css and bearer token doubled
+
 ## 0.0.14
 
 ### Patch Changes
