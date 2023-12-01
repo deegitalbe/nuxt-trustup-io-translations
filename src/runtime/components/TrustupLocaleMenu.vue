@@ -1,14 +1,14 @@
 <template>
   <div>
     <div
-      class="bg-neutral-100 cursor-pointer relative hover:bg-neutral-300 flex justify-center items-center px-[20px] w-fit text-[13px] h-[40px] rounded-[5px]"
+      class="bg-neutral-100 cursor-pointer relative hover:bg-neutral-300 flex justify-center items-center px-[20px] w-fit text-[13px] h-[40px] gap-1 rounded-[5px]"
       @click="showMenu = !showMenu"
     >
       <i class="fa-regular fa-globe"></i>
       Changer de Langue
       <div
         v-if="showMenu"
-        class="bg-white rounded-[5px] p-4 w-[300px] absolute top-[45px]"
+        class="bg-white shadow-lg rounded-[5px] p-4 w-[300px] absolute top-[45px]"
         :class="toRight ? 'right-0' : 'left-0'"
       >
         <div

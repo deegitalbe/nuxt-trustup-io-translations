@@ -17,7 +17,7 @@ class UpdateLocaleEndpoint {
       .setVerb("PATCH")
       .setUrl("user/update-locale")
       .addHeaders({
-        authorization: `Bearer ${token}`,
+        authorization: token,
       })
       .addData({ locale });
 
