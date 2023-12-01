@@ -63,6 +63,8 @@ NUXT_PUBLIC_APP_NAME=trustup-pro
 
 ```html
 <div>{{ $t("apps.worksite") }}</div>
+
+<TrustupLocaleMenu token="qsdqdqsd" :to-right="true" />
 ```
 
 OR

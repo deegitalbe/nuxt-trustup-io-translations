@@ -2,15 +2,14 @@ import type { AvailableLocale } from "@deegital/vue-3-trustup-io-translations";
 import { Client, Request } from "@henrotaym/api-client";
 import { useResponseParser } from "@henrotaymcorp/api-client-parser-addon";
 import { z } from "zod";
-import { AuthCredential } from "../../credentials/auth";
 
 const schema = z.any();
 
 class UpdateLocaleEndpoint {
   private client: Client;
 
-  constructor() {
-    this.client = new Client(new AuthCredential());
+  constructor(client: Client) {
+    this.client = client;
   }
 
   public async update(locale: AvailableLocale, token: string) {

@@ -32,8 +32,8 @@
 </template>
 
 <script lang="ts" setup>
-import ChangeLocale from "../services/ChangeLocale";
-import { ref, useTranslation } from "#imports";
+import ChangeLocaleFactory from "../services/ChangeLocaleFactory";
+import { ref, useTranslation, useRuntimeConfig } from "#imports";
 
 const props = defineProps<{
   toRight: boolean;
@@ -44,5 +44,6 @@ const { groupedLocales } = useTranslation();
 
 const showMenu = ref<boolean>(false);
 
-const service = new ChangeLocale(props.token);
+const authUrl = useRuntimeConfig().public.trustupIoAuthUrl;
+const service = new ChangeLocaleFactory().create(authUrl, props.token);
 </script>

@@ -6,9 +6,9 @@ class ChangeLocale {
   private _token: string;
   private _endpoint;
 
-  constructor(token: string) {
+  constructor(token: string, endpoint: ApiAuthUpdateLocaleEndpoint) {
     this._token = token;
-    this._endpoint = new ApiAuthUpdateLocaleEndpoint();
+    this._endpoint = endpoint;
   }
 
   public updateLocale(locale: AvailableLocale) {
