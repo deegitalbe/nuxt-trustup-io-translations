@@ -1,4 +1,4 @@
-<!-- <template>
+<template>
   <div
     class="h-screen w-screen flex items-center justify-center bg-gradient-to-br to-cyan-600 from-blue-500"
   >
@@ -12,25 +12,21 @@
     >
       <div v-if="isReady">
         <div
-          class="text-center p-8 rounded-full bg-white w-[650px] h-[650px] shadow-lg"
+          class="text-center p-8 rounded-full bg-green-400 w-[650px] h-[650px] shadow-lg"
         >
-          <div>
-            <div class="text-[300px]">🎉</div>
-            <div>{{ availableLocales }}</div>
-            <div>{{ currentLocale }}</div>
-            <div>{{ useTranslate("accoutant") }}</div>
-            <div>{{ t("worksite-admin.app.actions.create") }}</div>
-            <div class="text-2xl text-gray-600 font-thin">
-              Let's build something amazing !
-              {{ $t("apps.worksite") }} {{ t("apps.worksite") }}
-              {{ isLoading }}
-              <div v-if="!isLoading">
-                <div>
-                  {{ t("accoutant", { msg: "George" }) }}
-                </div>
+          <ul class="flex flex-col">
+            <li
+              v-for="(country, key) in groupedLocales"
+              :key="key"
+              class="text-3xl"
+            >
+              {{ key }}
+              <div v-for="locale in country" :key="locale.id" class="text-sm">
+                {{ locale.locale }}
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
+          <TrustupLocaleMenu token="qsdqdqsd" :to-right="true" />
         </div>
       </div>
     </Transition>
@@ -38,13 +34,12 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, useTranslate, useTranslation } from "#imports";
+import { onMounted, ref, useTranslation } from "#imports";
 
 const isReady = ref<boolean>(false);
-const { availableLocales, currentLocale, isLoading, t, addTranslationsByKey } =
-  useTranslation();
+const { addTranslationsByKey, groupedLocales } = useTranslation();
 
 setTimeout(() => addTranslationsByKey("worksite-admin"), 4000);
 
 onMounted(() => (isReady.value = true));
-</script> -->
+</script>

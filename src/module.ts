@@ -1,4 +1,5 @@
 import {
+  addComponent,
   addImports,
   addPlugin,
   createResolver,
@@ -30,6 +31,12 @@ export default defineNuxtModule<ModuleOptions>({
     addImports({
       name: "useTranslate",
       from: "@deegital/vue-3-trustup-io-translations",
+    });
+
+    addComponent({
+      name: "TrustupLocaleMenu",
+      export: "TrustupLocaleMenu",
+      filePath: resolve("runtime/components"),
     });
   },
 });
