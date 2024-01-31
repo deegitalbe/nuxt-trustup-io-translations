@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="bg-neutral-100 cursor-pointer relative hover:bg-neutral-300 flex justify-center items-center px-[20px] w-fit text-[13px] h-[40px] gap-1 rounded-[5px]"
+      class="bg-white cursor-pointer relative hover:bg-neutral-100 flex justify-center items-center px-[20px] w-fit text-[13px] h-[40px] gap-1 rounded-[5px]"
       @click="showMenu = !showMenu"
     >
       <i class="fa-regular fa-globe"></i>
