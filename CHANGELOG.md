@@ -1,5 +1,11 @@
 # @deegital/nuxt-trustup-io-translations
 
+## 0.0.16
+
+### Patch Changes
+
+- 7dcc8a1: Upgrade package dependencies
+
 ## 0.0.15
 
 ### Patch Changes
