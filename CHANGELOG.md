@@ -1,5 +1,11 @@
 # @deegital/nuxt-trustup-io-translations
 
+## 0.0.17
+
+### Patch Changes
+
+- b6ab60d: Upgrade vue package
+
 ## 0.0.16
 
 ### Patch Changes
